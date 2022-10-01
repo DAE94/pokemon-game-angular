@@ -47,6 +47,9 @@ h3 {
     justify-content: center;
     align-items: center;
 }
+.rotate {
+  transform : rotate(180deg);
+}
 
 /* TODO: modificar el responsive para celulares */
 /* @media only screen and (max-height: 850px) {

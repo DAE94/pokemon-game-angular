@@ -1,0 +1,16 @@
+<ng-container *ngIf ="!isLoggedIn; else loggedInTemplate">
+  <div id="login">
+  <form (ngSubmit)="onSubmit()">
+    <label>Jugador: <input [(ngModel)]="usuari"
+                           name="usuari" required></label>
+        <button type="submit" mat-raised-button
+                color="primary"
+                routerLink="/home"
+                class="breath"
+                >Jugar</button>
+  </form>
+  </div>
+</ng-container>
+<ng-template #loggedInTemplate>
+
+</ng-template>

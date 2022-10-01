@@ -20,7 +20,7 @@ export class GameComponent implements OnInit {
   get score(): number {
     return this.playerService.score;
   }
-  
+
   get hearts(): Array<any> {
     return Array(this.playerService.lifes);
   }
@@ -45,6 +45,13 @@ export class GameComponent implements OnInit {
   get pokemonName(): string {
     return this._selected? this._pokemon.name : 'undefined';
   }
+  rotate(){
+    let image = document.getElementById("transform");
+    if(image){
+      image.classList.add("rotate");
+      console.log("event rotar")
+    }
+  }
 
   constructor(
     private playerService: PlayerService,
@@ -68,7 +75,7 @@ export class GameComponent implements OnInit {
       this.playerService.decreaseLifes();
       console.log('incorrect');
     }
-    
+
   }
 
   // this function es execute every time that user click in next game
@@ -88,5 +95,6 @@ export class GameComponent implements OnInit {
       this.loaded = true;
     }
   }
+
 
 }

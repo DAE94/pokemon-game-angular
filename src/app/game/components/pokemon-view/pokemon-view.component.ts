@@ -25,5 +25,12 @@ export class PokemonViewComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  rotate() {
+    let image = document.getElementById("transform");
+    if (image) {
+      image.classList.add("rotate");
+      console.log("event rotar")
+    }
+  }
 
 }
