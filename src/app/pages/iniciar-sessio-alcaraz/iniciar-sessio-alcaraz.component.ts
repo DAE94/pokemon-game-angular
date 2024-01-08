@@ -22,6 +22,11 @@ export class IniciarSessioAlcarazComponent implements OnInit {
 
   }
 
+  public sendUser() {
+    localStorage.setItem('user', this.usuari)
+
+  }
+
   protected readonly PlayerService = PlayerService;
 
 

@@ -15,12 +15,14 @@
             <h2>Who is that Pokemon?...</h2>
         </div>
 
-        <div id="transform" (contextmenu)="rotate()">
+        <div>
+            <div id="transform" (contextmenu)="rotate()">
             <app-pokemon-view [url]="urlImage"
                               [show]="selected"
                               [width]="275"
                               [height]="200">
             </app-pokemon-view>
+            </div>
             <h2 class="response" *ngIf="selected">Is {{ pokemonName }}!</h2>
         </div>
 
